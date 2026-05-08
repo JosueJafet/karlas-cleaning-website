@@ -1,164 +1,247 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 import logo from "../assets/logo.png";
 
 function Navbar() {
+
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const location = useLocation();
+
+  useEffect(() => {
+
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 30);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+
+  }, []);
+
+  /* CLOSE MENU ON SCROLL */
+  useEffect(() => {
+
+    const closeMenu = () => {
+      setMenuOpen(false);
+    };
+
+    window.addEventListener("scroll", closeMenu);
+
+    return () => window.removeEventListener("scroll", closeMenu);
+
+  }, []);
+
+  /* LOCK BODY SCROLL */
+  useEffect(() => {
+
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+
+  }, [menuOpen]);
+
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Contact", path: "/contact" },
+    { name: "FAQ", path: "/faq" },
+  ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50">
 
-      {/* BACKGROUND */}
-      <div className="absolute inset-0 backdrop-blur-2xl bg-black/20 border-b border-white/10"></div>
+    <motion.nav
+      initial={{ y: -80 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-black/70 backdrop-blur-2xl border-b border-pink-500/10 shadow-[0_10px_40px_rgba(0,0,0,0.45)]"
+          : "bg-black/20 backdrop-blur-xl border-b border-white/10"
+      }`}
+    >
 
       {/* CONTAINER */}
-      <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 md:px-10 lg:px-14 py-4 flex items-center justify-between">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-10 lg:px-14">
 
-        {/* LOGO */}
-        <Link
-          to="/"
-          className="flex items-center gap-3 min-w-0"
-        >
-          <img
-            src={logo}
-            alt="logo"
-            className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border border-pink-500/30 shadow-[0_0_20px_rgba(236,72,153,0.35)] flex-shrink-0"
-          />
+        <div className="h-[82px] flex items-center justify-between">
 
-          <div className="leading-tight min-w-0">
-
-            <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-white truncate">
-              Karla's{" "}
-              <span className="text-pink-500">
-                Cleaning LLC
-              </span>
-            </h1>
-
-            <p className="hidden md:block text-[10px] uppercase tracking-[4px] text-gray-300 mt-1">
-              Premium Residential Cleaning
-            </p>
-
-          </div>
-        </Link>
-
-        {/* DESKTOP LINKS */}
-        <div className="hidden lg:flex items-center gap-10 xl:gap-16 text-sm xl:text-[15px] tracking-wide font-medium">
-
+          {/* LOGO */}
           <Link
             to="/"
-            className="text-white hover:text-pink-400 transition-all duration-300 relative group"
+            className="flex items-center gap-3 group"
           >
-            Home
-            <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-pink-500 transition-all duration-300 group-hover:w-full"></span>
+
+            <img
+              src={logo}
+              alt="logo"
+              className="w-11 h-11 md:w-12 md:h-12 rounded-full object-cover border border-pink-500/30 shadow-[0_0_25px_rgba(236,72,153,0.35)] group-hover:scale-105 transition duration-300"
+            />
+
+            <div className="leading-tight">
+
+              <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-white">
+
+                Karla's{" "}
+
+                <span className="text-pink-500">
+                  Cleaning LLC
+                </span>
+
+              </h1>
+
+              <p className="hidden md:block text-[10px] uppercase tracking-[4px] text-gray-300 mt-1">
+                Premium Residential Cleaning
+              </p>
+
+            </div>
+
           </Link>
 
-          <Link
-            to="/about"
-            className="text-white hover:text-pink-400 transition-all duration-300 relative group"
-          >
-            About
-            <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-pink-500 transition-all duration-300 group-hover:w-full"></span>
-          </Link>
+          {/* DESKTOP LINKS */}
+          <div className="hidden lg:flex items-center gap-12">
 
-          <Link
-            to="/services"
-            className="text-white hover:text-pink-400 transition-all duration-300 relative group"
-          >
-            Services
-            <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-pink-500 transition-all duration-300 group-hover:w-full"></span>
-          </Link>
+            {navLinks.map((link) => {
 
-          <Link
-            to="/contact"
-            className="text-white hover:text-pink-400 transition-all duration-300 relative group"
-          >
-            Contact
-            <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-pink-500 transition-all duration-300 group-hover:w-full"></span>
-          </Link>
+              const active = location.pathname === link.path;
 
-        </div>
+              return (
 
-        {/* RIGHT SIDE */}
-        <div className="flex items-center gap-3">
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className={`relative text-sm tracking-wide font-medium transition-all duration-300 ${
+                    active
+                      ? "text-pink-400"
+                      : "text-white hover:text-pink-400"
+                  }`}
+                >
 
-          {/* DESKTOP BUTTON */}
-          <Link
-            to="/contact"
-            className="hidden md:block"
-          >
-            <button className="bg-gradient-to-r from-pink-500 to-pink-600 hover:scale-105 hover:shadow-[0_0_30px_rgba(236,72,153,0.45)] transition-all duration-300 text-white px-5 lg:px-7 py-3 rounded-2xl font-semibold text-sm shadow-xl whitespace-nowrap">
-              Free Estimate ✨
+                  {link.name}
+
+                  <span
+                    className={`absolute -bottom-2 left-0 h-[2px] bg-pink-500 transition-all duration-300 ${
+                      active ? "w-full" : "w-0 hover:w-full"
+                    }`}
+                  ></span>
+
+                </Link>
+
+              );
+
+            })}
+
+          </div>
+
+          {/* RIGHT SIDE */}
+          <div className="flex items-center gap-3">
+
+            {/* DESKTOP BUTTON */}
+            <Link
+              to="/contact"
+              className="hidden md:block"
+            >
+
+              <button className="bg-gradient-to-r from-pink-500 to-pink-600 hover:scale-105 hover:shadow-[0_0_35px_rgba(236,72,153,0.45)] transition-all duration-300 text-white px-6 lg:px-8 py-3 rounded-2xl font-semibold text-sm shadow-xl">
+
+                Free Estimate ✨
+
+              </button>
+
+            </Link>
+
+            {/* MOBILE BUTTON */}
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="lg:hidden text-white w-11 h-11 rounded-xl border border-white/10 bg-white/5 flex items-center justify-center backdrop-blur-md hover:border-pink-500/30 transition"
+            >
+
+              {menuOpen ? <X size={22} /> : <Menu size={22} />}
+
             </button>
-          </Link>
 
-          {/* MOBILE MENU BUTTON */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="lg:hidden text-white w-11 h-11 rounded-xl border border-white/10 bg-white/5 flex items-center justify-center backdrop-blur-md"
-          >
-            {menuOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
+          </div>
 
         </div>
 
       </div>
 
       {/* MOBILE MENU */}
-      {menuOpen && (
+      <AnimatePresence>
 
-        <div className="lg:hidden border-t border-white/10 bg-black/90 backdrop-blur-2xl">
+        {menuOpen && (
 
-          <div className="flex flex-col px-6 py-6 gap-5 text-white">
+          <motion.div
+            initial={{ opacity: 0, y: -25 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -25 }}
+            transition={{ duration: 0.25 }}
+            className="
+              lg:hidden
+              border-t
+              border-pink-500/10
+              bg-black/90
+              backdrop-blur-3xl
+              shadow-[0_20px_60px_rgba(0,0,0,0.55)]
+            "
+          >
 
-            <Link
-              to="/"
-              onClick={() => setMenuOpen(false)}
-              className="hover:text-pink-400 transition"
-            >
-              Home
-            </Link>
+            <div className="flex flex-col px-6 py-8 gap-6 text-white">
 
-            <Link
-              to="/about"
-              onClick={() => setMenuOpen(false)}
-              className="hover:text-pink-400 transition"
-            >
-              About
-            </Link>
+              {navLinks.map((link) => (
 
-            <Link
-              to="/services"
-              onClick={() => setMenuOpen(false)}
-              className="hover:text-pink-400 transition"
-            >
-              Services
-            </Link>
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={() => setMenuOpen(false)}
+                  className={`text-lg transition-all duration-300 ${
+                    location.pathname === link.path
+                      ? "text-pink-400"
+                      : "hover:text-pink-400"
+                  }`}
+                >
 
-            <Link
-              to="/contact"
-              onClick={() => setMenuOpen(false)}
-              className="hover:text-pink-400 transition"
-            >
-              Contact
-            </Link>
+                  {link.name}
 
-            <Link
-              to="/contact"
-              onClick={() => setMenuOpen(false)}
-            >
-              <button className="w-full mt-2 bg-gradient-to-r from-pink-500 to-pink-600 text-white py-3 rounded-2xl font-semibold">
-                Free Estimate ✨
-              </button>
-            </Link>
+                </Link>
 
-          </div>
+              ))}
 
-        </div>
+              <Link
+                to="/contact"
+                onClick={() => setMenuOpen(false)}
+              >
 
-      )}
+                <button className="w-full mt-3 bg-gradient-to-r from-pink-500 to-pink-600 text-white py-4 rounded-2xl font-semibold shadow-[0_0_30px_rgba(236,72,153,0.25)]">
 
-    </nav>
+                  Free Estimate ✨
+
+                </button>
+
+              </Link>
+
+            </div>
+
+          </motion.div>
+
+        )}
+
+      </AnimatePresence>
+
+    </motion.nav>
+
   );
 }
 

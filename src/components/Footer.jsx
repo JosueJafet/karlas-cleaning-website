@@ -75,6 +75,13 @@ function Footer() {
                 Services
               </Link>
 
+              <Link 
+                to="/faq"
+                className="hover:text-pink-400 transition duration-300"
+                >
+                FAQ
+              </Link>
+
               <Link
                 to="/contact"
                 className="hover:text-pink-400 transition duration-300"
