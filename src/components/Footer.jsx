@@ -75,10 +75,10 @@ function Footer() {
                 Services
               </Link>
 
-              <Link 
+              <Link
                 to="/faq"
                 className="hover:text-pink-400 transition duration-300"
-                >
+              >
                 FAQ
               </Link>
 
@@ -107,8 +107,8 @@ function Footer() {
                 <Clock3 size={20} className="text-pink-400 mt-1" />
 
                 <div>
-                  <p>Mon - Sat</p>
-                  <p>7:00 AM - 7:00 PM</p>
+                  <p>Mon - Fri</p>
+                  <p>8:00 AM - 5:00 PM</p>
                 </div>
 
               </div>

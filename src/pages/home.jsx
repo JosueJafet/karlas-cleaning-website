@@ -3,6 +3,7 @@ import Testimonials from "../sections/home/Testimonials";
 import HeroSection from   "../sections/home/HeroSection";
 import WhyChooseUs from "../sections/home/WhyChooseUs";
 import BeforeAfterSection from "../sections/home/BeforeAfterSection";
+import SEO from "../components/SEO";
 import {
   Phone,
   Mail,
@@ -23,6 +24,11 @@ function Home() {
 
       {/* NAVBAR */}
       <div className="absolute top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/20 border-b border-white/10">
+      <SEO
+  title="Karla's Cleaning LLC | Premium Residential Cleaning Services"
+  description="Luxury residential cleaning services in the Bay Area including deep cleaning recurring cleaning move in / move out and housekeeping services."
+  keywords="cleaning services Bay Area, residential cleaning, housekeeping services, luxury cleaning company, deep cleaning"
+/>
         <Navbar />
       </div>
 
@@ -95,8 +101,8 @@ function Home() {
                 <Clock3 />
 
                 <div>
-                  <p>Mon - Sat</p>
-                  <p>7:00 AM - 7:00 PM</p>
+                  <p>Monday- Friday</p>
+                  <p>8:00 AM - 5:00 PM</p>
                 </div>
 
               </div>

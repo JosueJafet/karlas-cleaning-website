@@ -74,7 +74,7 @@ export default function ContactInfo() {
               </p>
 
               <p className="text-white">
-                Monday - Saturday
+                Monday - Friday
               </p>
             </div>
 
