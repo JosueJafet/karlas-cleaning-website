@@ -18,7 +18,7 @@ function Contact() {
       <ContactHero />
 
       {/* CONTACT SECTION */}
-      <section className="px-5 md:px-12 py-24">
+      <section className="px-5 md:px-12 pt-36 pb-24">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
 

@@ -47,13 +47,29 @@ export default function ContactForm() {
       initial={{ opacity: 0, x: 35 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
-      className="relative"
+      className="relative w-full"
     >
 
       {/* GLOW */}
       <div className="absolute inset-0 bg-pink-500/20 blur-3xl rounded-[40px]"></div>
 
-      <div className="relative bg-white/5 border border-pink-500/20 backdrop-blur-xl rounded-[35px] p-8 md:p-10 shadow-[0_0_60px_rgba(0,0,0,0.4)]">
+      <div
+        className="
+          relative
+          w-full
+          max-w-full
+          overflow-hidden
+          bg-white/5
+          border
+          border-pink-500/20
+          backdrop-blur-xl
+          rounded-[35px]
+          p-5
+          sm:p-6
+          md:p-10
+          shadow-[0_0_60px_rgba(0,0,0,0.4)]
+        "
+      >
 
         <div className="text-center mb-10">
 
@@ -61,7 +77,7 @@ export default function ContactForm() {
             <Sparkles size={28} />
           </div>
 
-          <h3 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h3 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             Free Estimate <span className="text-pink-500">Form</span>
           </h3>
 
@@ -75,70 +91,158 @@ export default function ContactForm() {
 
           <input
             name="name"
-            className="bg-black/30 border border-white/10 focus:border-pink-500 outline-none p-5 rounded-2xl text-white placeholder:text-gray-400"
             placeholder="Full Name"
             required
+            className="
+              w-full
+              min-w-0
+              bg-black/30
+              border
+              border-white/10
+              focus:border-pink-500
+              outline-none
+              p-5
+              rounded-2xl
+              text-white
+              placeholder:text-gray-400
+            "
           />
 
           <input
             name="email"
-            className="bg-black/30 border border-white/10 focus:border-pink-500 outline-none p-5 rounded-2xl text-white placeholder:text-gray-400"
             placeholder="Email Address"
             required
+            className="
+              w-full
+              min-w-0
+              bg-black/30
+              border
+              border-white/10
+              focus:border-pink-500
+              outline-none
+              p-5
+              rounded-2xl
+              text-white
+              placeholder:text-gray-400
+            "
           />
 
           <input
             name="phone"
-            className="bg-black/30 border border-white/10 focus:border-pink-500 outline-none p-5 rounded-2xl text-white placeholder:text-gray-400"
             placeholder="Phone Number"
             required
+            className="
+              w-full
+              min-w-0
+              bg-black/30
+              border
+              border-white/10
+              focus:border-pink-500
+              outline-none
+              p-5
+              rounded-2xl
+              text-white
+              placeholder:text-gray-400
+            "
           />
 
           <input
             name="address"
-            className="bg-black/30 border border-white/10 focus:border-pink-500 outline-none p-5 rounded-2xl text-white placeholder:text-gray-400"
             placeholder="Service Address"
             required
+            className="
+              w-full
+              min-w-0
+              bg-black/30
+              border
+              border-white/10
+              focus:border-pink-500
+              outline-none
+              p-5
+              rounded-2xl
+              text-white
+              placeholder:text-gray-400
+            "
           />
 
           <select
-  name="service"
-  className="bg-black/30 border border-white/10 focus:border-pink-500 outline-none p-5 rounded-2xl text-white"
-  required
->
+            name="service"
+            required
+            className="
+              w-full
+              min-w-0
+              bg-black/30
+              border
+              border-white/10
+              focus:border-pink-500
+              outline-none
+              p-5
+              rounded-2xl
+              text-white
+            "
+          >
 
-  <option value="" className="text-black">
-    Select Cleaning Service
-  </option>
+            <option value="" className="text-black">
+              Select Cleaning Service
+            </option>
 
-  <option className="text-black">
-    One-Time Deep Cleaning Services
-  </option>
+            <option className="text-black">
+              One-Time Deep Cleaning Services
+            </option>
 
-  <option className="text-black">
-    Recurring Cleaning Services
-  </option>
+            <option className="text-black">
+              Recurring Cleaning Services
+            </option>
 
-  <option className="text-black">
-    Move-in / Move-out Services
-  </option>
+            <option className="text-black">
+              Move-in / Move-out Services
+            </option>
 
-  <option className="text-black">
-    Post-construction Services
-  </option>
+            <option className="text-black">
+              Housekeeping Services
+            </option>
 
-</select>
+          </select>
 
           <textarea
             name="message"
-            className="bg-black/30 border border-white/10 focus:border-pink-500 outline-none p-5 rounded-2xl h-44 text-white placeholder:text-gray-400"
             placeholder="Additional Notes / Preferred Date / Home Details..."
+            className="
+              w-full
+              min-w-0
+              bg-black/30
+              border
+              border-white/10
+              focus:border-pink-500
+              outline-none
+              p-5
+              rounded-2xl
+              h-44
+              text-white
+              placeholder:text-gray-400
+              resize-none
+            "
           ></textarea>
 
           <button
             type="submit"
             disabled={sending}
-            className="bg-gradient-to-r from-pink-500 to-pink-600 hover:scale-[1.02] hover:shadow-[0_0_35px_rgba(236,72,153,0.45)] transition-all duration-300 text-white p-5 rounded-2xl shadow-xl font-semibold text-lg"
+            className="
+              w-full
+              bg-gradient-to-r
+              from-pink-500
+              to-pink-600
+              hover:scale-[1.02]
+              hover:shadow-[0_0_35px_rgba(236,72,153,0.45)]
+              transition-all
+              duration-300
+              text-white
+              p-5
+              rounded-2xl
+              shadow-xl
+              font-semibold
+              text-lg
+            "
           >
             {sending
               ? "Sending Request..."
@@ -158,5 +262,3 @@ export default function ContactForm() {
     </motion.form>
   );
 }
-
-
