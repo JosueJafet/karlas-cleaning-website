@@ -47,36 +47,28 @@ function Navbar() {
   ];
 
   const services = [
-    {
-      name: "One-Time Deep Cleaning Services",
-      path: "/services/deep-cleaning",
-    },
 
-    {
-      name: "Recurring Cleaning Services",
-      path: "/services/recurring-cleaning",
-    },
+  {
+    name: "One-Time Deep Cleaning Services",
+    path: "/services/deep-cleaning",
+  },
 
-    {
-      name: "Move-in / Move-out Services",
-      path: "/services/move-in-move-out",
-    },
+  {
+    name: "Recurring Cleaning Services",
+    path: "/services/recurring-cleaning",
+  },
 
-    {
-      name: "Housekeeping Services",
-      path: "/services/housekeeping",
-    },
+  {
+    name: "Move-in / Move-out Services",
+    path: "/services/move-in-move-out",
+  },
 
-    {
-      name: "Post-construction Services",
-      path: "/services/post-construction",
-    },
+  {
+    name: "Post-construction Services",
+    path: "/services/post-construction",
+  },
 
-    {
-      name: "Event Cleaning Services",
-      path: "/services/event-cleaning",
-    },
-  ];
+];
 
   return (
 

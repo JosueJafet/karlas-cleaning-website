@@ -102,39 +102,32 @@ export default function ContactForm() {
           />
 
           <select
-            name="service"
-            className="bg-black/30 border border-white/10 focus:border-pink-500 outline-none p-5 rounded-2xl text-white"
-            required
-          >
-            <option value="" className="text-black">
-              Select Cleaning Service
-            </option>
+  name="service"
+  className="bg-black/30 border border-white/10 focus:border-pink-500 outline-none p-5 rounded-2xl text-white"
+  required
+>
 
-            <option className="text-black">
-              Standard Cleaning
-            </option>
+  <option value="" className="text-black">
+    Select Cleaning Service
+  </option>
 
-            <option className="text-black">
-              Deep Cleaning
-            </option>
+  <option className="text-black">
+    One-Time Deep Cleaning Services
+  </option>
 
-            <option className="text-black">
-              Move In / Move Out
-            </option>
+  <option className="text-black">
+    Recurring Cleaning Services
+  </option>
 
-            <option className="text-black">
-              Post Construction
-            </option>
+  <option className="text-black">
+    Move-in / Move-out Services
+  </option>
 
-            <option className="text-black">
-              Carpet Cleaning
-            </option>
+  <option className="text-black">
+    Post-construction Services
+  </option>
 
-            <option className="text-black">
-              Extra Inside Services
-            </option>
-
-          </select>
+</select>
 
           <textarea
             name="message"
