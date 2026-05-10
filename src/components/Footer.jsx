@@ -118,8 +118,8 @@ function Footer() {
                 <Calendar size={20} className="text-pink-400 mt-1" />
 
                 <div>
-                  <p>Sundays</p>
-                  <p>By Appointment Only</p>
+                  <p>Saturday - Sunday </p>
+                  <p>CLOSED</p>
                 </div>
 
               </div>

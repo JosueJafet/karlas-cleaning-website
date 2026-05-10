@@ -24,7 +24,7 @@ const extras = [
   },
 
   {
-    title: "Inside Kitchen Cabinets",
+    title: "Inside Empthy Kitchen Cabinets",
     icon: DoorOpen,
   },
 
@@ -39,7 +39,12 @@ const extras = [
   },
 
   {
-    title: "Inside Windows",
+  title: "Baseboards",
+  icon: Sparkles,
+},
+
+  {
+    title: "Inside Windows Plus Track and Screen",
     icon: Sparkles,
   },
 

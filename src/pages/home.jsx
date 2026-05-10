@@ -101,7 +101,7 @@ function Home() {
                 <Clock3 />
 
                 <div>
-                  <p>Monday- Friday</p>
+                  <p>Monday - Friday</p>
                   <p>8:00 AM - 5:00 PM</p>
                 </div>
 
@@ -112,8 +112,8 @@ function Home() {
                 <Calendar />
 
                 <div>
-                  <p>Sundays</p>
-                  <p>By Appointment Only</p>
+                  <p>Saturday - Sunday</p>
+                  <p>CLOSED</p>
                 </div>
 
               </div>

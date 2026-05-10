@@ -115,7 +115,7 @@ function Navbar() {
 
               </h1>
 
-              <p className="hidden md:block text-[10px] uppercase tracking-[4px] text-gray-500 mt-1">
+              <p className="hidden md:block text-[11px] uppercase tracking-[3px] text-[#2f2f2f] font-black mt-1">
                 Premium Residential Cleaning
               </p>
 
