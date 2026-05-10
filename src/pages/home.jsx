@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Testimonials from "../sections/home/Testimonials";
-import HeroSection from   "../sections/home/HeroSection";
+import HeroSection from "../sections/home/HeroSection";
 import WhyChooseUs from "../sections/home/WhyChooseUs";
 import BeforeAfterSection from "../sections/home/BeforeAfterSection";
 import SEO from "../components/SEO";
