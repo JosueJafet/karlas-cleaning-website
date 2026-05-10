@@ -13,7 +13,7 @@ import MoveInMoveOut from "./pages/services/MoveInMoveOut";
 import Housekeeping from "./pages/services/Housekeeping";
 import PostConstruction from "./pages/services/PostConstruction";
 import EventCleaning from "./pages/services/EventCleaning";
-
+import ExtraInsideServices from "./pages/services/ExtraInsideServices";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 function App() {
@@ -33,6 +33,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/faq" element={<FAQ />} />
+
+
 
         {/* SERVICE PAGES */}
         <Route
@@ -64,6 +66,11 @@ function App() {
           path="/services/event-cleaning"
           element={<EventCleaning />}
         />
+
+        <Route
+  path="/services/extra-inside-services"
+  element={<ExtraInsideServices />}
+/>
 
       </Routes>
 

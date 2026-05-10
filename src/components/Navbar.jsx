@@ -68,6 +68,11 @@ function Navbar() {
     path: "/services/post-construction",
   },
 
+  {
+  name: "Extra Inside Services",
+  path: "/services/extra-inside-services",
+},
+
 ];
 
   return (

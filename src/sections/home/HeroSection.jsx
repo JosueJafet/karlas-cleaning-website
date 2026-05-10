@@ -20,13 +20,13 @@ export default function HeroSection() {
       >
 
         {/* LIGHT OVERLAY */}
-        <div className="absolute inset-0 bg-white/55"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/35 via-white/10 to-white/25"></div>
 
         {/* SOFT GRADIENT */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/45 to-white/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/35 via-white/10 to-white/25"></div>
 
         {/* SOFT LIGHT */}
-        <div className="absolute top-0 left-0 w-full h-full bg-[#fff4f7]/40 blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[#fff4f7]/10 blur-3xl"></div>
 
         <div className="relative z-10 w-full max-w-[1600px] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-20 px-4 sm:px-6 md:px-10 lg:px-14 pt-32 pb-20 items-center">
 

@@ -8,7 +8,7 @@ import {
   CalendarDays,
 } from "lucide-react";
 
-import recurringImage from "../../assets/hero2.jpeg";
+import recurringImage from "../../assets/hero19.jpg";
 
 const recurringBenefits = [
   "Weekly, biweekly or monthly options",

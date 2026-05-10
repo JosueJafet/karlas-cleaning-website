@@ -74,7 +74,7 @@ export default function ContactInfo() {
               </p>
 
               <p className="text-white">
-                Monday - Friday
+                8am - 5pm
               </p>
             </div>
 
@@ -92,7 +92,7 @@ export default function ContactInfo() {
               </p>
 
               <p className="text-white">
-                Bay Area, California
+                We proudly serve the Silicon Valley area, including San José (Almaden Valley), Santa Clara, Sunnyvale, Mountain View, Cupertino, Los Gatos, Saratoga, Campbell, and surrounding cities.
               </p>
             </div>
 

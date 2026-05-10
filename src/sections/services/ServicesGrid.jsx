@@ -13,6 +13,8 @@ import hero13 from "../../assets/hero13.jpg";
 import hero9 from "../../assets/hero9.png";
 import hero10 from "../../assets/hero10.jpg";
 import hero11 from "../../assets/hero11.jpg";
+import hero18 from "../../assets/hero18.jpeg";
+
 
 export default function ServicesGrid() {
 
@@ -47,7 +49,7 @@ export default function ServicesGrid() {
 
     {
       title: "Move In / Move Out",
-      image: hero12,
+      image: hero18,
       desc: "Perfect empty-home cleaning before moving in or after moving out for a spotless handoff.",
       includes: [
         "Cabinets",

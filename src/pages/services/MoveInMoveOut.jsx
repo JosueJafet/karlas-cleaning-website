@@ -9,7 +9,7 @@ import {
   Truck,
 } from "lucide-react";
 
-import moveImage from "../../assets/hero3.jpeg";
+import moveImage from "../../assets/hero18.jpeg";
 
 const moveBenefits = [
   "Perfect for moving into a fresh new home",
@@ -315,6 +315,119 @@ export default function MoveInMoveOut() {
         </div>
 
       </section>
+
+      {/* EXTRA INSIDE SERVICES */}
+<section className="pb-28 px-5 md:px-12">
+
+  <div className="max-w-7xl mx-auto">
+
+    <div className="text-center mb-20">
+
+      <p className="uppercase tracking-[5px] text-pink-700 text-sm font-semibold mb-5">
+        OPTIONAL ADD-ONS
+      </p>
+
+      <h2 className="text-5xl md:text-6xl font-black text-[#7a1535] mb-6">
+        Extra Services
+      </h2>
+
+      <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-8">
+
+        Personalized extra services available upon request
+        for a more detailed and complete cleaning experience.
+
+      </p>
+
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {[
+
+        {
+          title: "Ceiling Fans",
+          icon: "🌀",
+        },
+
+        {
+          title: "Inside Windows",
+          icon: "🪟",
+        },
+
+        {
+          title: "Sliding Glass Doors",
+          icon: "🚪",
+        },
+
+        {
+          title: "Wiping Down Blinds",
+          icon: "✨",
+        },
+
+        {
+          title: "Making Beds",
+          icon: "🛏️",
+        },
+
+        {
+          title: "Patio Cleaning",
+          icon: "🌿",
+        },
+
+        {
+          title: "Garage Cleaning",
+          icon: "🏠",
+        },
+
+      ].map((service, index) => (
+
+        <div
+          key={index}
+          className="
+            bg-white
+            rounded-[35px]
+            p-8
+            shadow-md
+            hover:shadow-2xl
+            hover:-translate-y-2
+            transition-all
+            duration-300
+            border
+            border-pink-100
+          "
+        >
+
+          <div className="
+            w-16
+            h-16
+            rounded-2xl
+            bg-pink-100
+            flex
+            items-center
+            justify-center
+            text-3xl
+            mb-6
+          ">
+
+            {service.icon}
+
+          </div>
+
+          <h3 className="text-2xl font-black text-[#7a1535] leading-snug">
+
+            {service.title}
+
+          </h3>
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* CTA */}
       <section className="pb-28 px-5 md:px-12">
