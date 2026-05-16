@@ -39,7 +39,7 @@ const extras = [
   },
 
   {
-  title: "Baseboards",
+  title: "Baseboards Handed Cleaned",
   icon: Sparkles,
 },
 
@@ -49,7 +49,7 @@ const extras = [
   },
 
   {
-    title: "Sliding Glass Doors",
+    title: "Sliding Glass Doors in and out Plus Track and Screen",
     icon: DoorOpen,
   },
 
@@ -59,8 +59,8 @@ const extras = [
   },
 
   {
-    title: "Making Beds",
-    icon: BedDouble,
+    title: "Appliances Cleaned exterior and interior (Ovens,microwaves,etc)",
+    icon: Sparkles,
   },
 
   {

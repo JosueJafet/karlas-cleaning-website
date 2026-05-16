@@ -26,9 +26,8 @@ const allRooms = [
   "Windowsills and air vents",
   "Furniture top, front and underneath dusted",
   "Decorative objects and picture frames",
-  "Upholstery and cushions vacuumed including under cushions",
   "Rugs and underneath vacuumed and mopped",
-  "Baseboards cleaned",
+  "Baseboards hand cleaned",
   "Floors vacuumed including edging",
   "Floors vacuumed and wet mopped",
 ];
@@ -40,8 +39,8 @@ const kitchen = [
   "Stove surface",
   "Stove hood interior and exterior",
   "Backsplash and sink scrubbed, fixtures polished",
-  "Countertops items removed surface and items wiped replaced",
-  "Cabinet fronts and handles wiped",
+  "Countertops Wiped and Carved",
+  "Inside Empthy Kitchen Cabinet exterior and interior handles wiped",
   "Trash cans emptied cleaned and bags replaced",
   "Runners vacuumed and mopped underneath",
   "Floors vacuumed and wet mopped",
@@ -49,10 +48,9 @@ const kitchen = [
 
 const bathrooms = [
   "Exhaust fan vents and light fixtures dusted",
-  "Vanity items removed wiped and replaced",
   "Sink faucets and mirrors cleaned and polished",
   "Chrome fixtures polished",
-  "Cabinet exterior and handles wiped",
+  "Inside Empthy bathroom Cabinet exterior and interior handles wiped",
   "Toilet cleaned and sanitized",
   "Showers and bathtubs washed scrubbed rinsed",
   "Grout scrubbed where needed",
@@ -355,7 +353,7 @@ export default function MoveInMoveOut() {
         },
 
         {
-          title: "Sliding Glass Doors",
+          title: "Sliding Glass Doors in and out Plus Track and Screen",
           icon: "🚪",
         },
 
@@ -365,8 +363,8 @@ export default function MoveInMoveOut() {
         },
 
         {
-          title: "Making Beds",
-          icon: "🛏️",
+          title: "Inside all Appliances exterior and interior",
+          icon: "🎛️",
         },
 
         {
