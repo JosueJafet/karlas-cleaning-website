@@ -29,7 +29,7 @@ const extras = [
   },
 
   {
-    title: "Inside Bathroom Cabinets",
+    title: "Inside Empthy Bathroom Cabinets",
     icon: DoorOpen,
   },
 
@@ -59,7 +59,7 @@ const extras = [
   },
 
   {
-    title: "Appliances Cleaned exterior and interior (Ovens,microwaves,etc)",
+    title: "Appliances Cleaned exterior and interior (Ovens,microwaves, freezer,etc)",
     icon: Sparkles,
   },
 
@@ -147,6 +147,7 @@ export default function ExtraInsideServices() {
                     duration-300
                     border
                     border-pink-100
+                    min-h-[320px]
                   "
                 >
 
@@ -168,7 +169,14 @@ export default function ExtraInsideServices() {
 
                   </div>
 
-                  <h3 className="text-3xl font-black text-[#7a1535] leading-snug">
+                  <h3 className="
+  text-2xl
+  md:text-3xl
+  font-black
+  text-[#7a1535]
+  leading-tight
+  break-words
+">
 
                     {service.title}
 
