@@ -10,6 +10,7 @@ import {
   CookingPot,
   Warehouse,
   DoorOpen,
+  Bed,
 } from "lucide-react";
 
 const extras = [
@@ -62,6 +63,12 @@ const extras = [
     title: "Appliances Cleaned exterior and interior (Ovens,microwaves, freezer,etc)",
     icon: Sparkles,
   },
+
+  {
+    title: "Making Beds",
+    icon: Bed,
+  },
+
 
   {
     title: "Patio Cleaning",

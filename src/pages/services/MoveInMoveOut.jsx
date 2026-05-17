@@ -33,8 +33,7 @@ const allRooms = [
 ];
 
 const kitchen = [
-  "Appliances exterior",
-  "Small appliances inside and outside",
+  "Appliances inside and outside",
   "Microwave inside and outside",
   "Stove surface",
   "Stove hood interior and exterior",
@@ -348,7 +347,7 @@ export default function MoveInMoveOut() {
         },
 
         {
-          title: "Inside Windows",
+          title: "Inside Windows Plus Track and Screen",
           icon: "🪟",
         },
 

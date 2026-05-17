@@ -5,10 +5,15 @@ import hero2 from "../../assets/hero2.jpeg";
 import hero3 from "../../assets/hero3.jpeg";
 import hero4 from "../../assets/hero4.jpeg";
 import hero5 from "../../assets/hero5.jpeg";
+import hero20 from "../../assets/hero20.jpeg";
+import hero21 from "../../assets/hero21.jpeg";
+import hero22 from "../../assets/hero22.jpeg";
+import hero23 from "../../assets/hero23.jpeg";
+
 
 export default function GalleryPreview() {
 
-  const gallery = [hero1, hero2, hero3, hero4, hero5];
+  const gallery = [hero1, hero2, hero3, hero4, hero5, hero20, hero21, hero22, hero23];
 
   return (
 
