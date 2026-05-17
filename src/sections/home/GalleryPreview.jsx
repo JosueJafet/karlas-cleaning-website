@@ -1,9 +1,15 @@
 import { motion } from "framer-motion";
 
 import hero1 from "../../assets/hero1.jpeg";
-import hero2 from "../../assets/hero2.jpeg";
-import hero3 from "../../assets/hero3.jpeg";
-import hero4 from "../../assets/hero4.jpeg";
+import hero100 from "../../assets/hero100.jpeg";
+import hero101 from "../../assets/hero101.jpeg";
+import hero102 from "../../assets/hero102.jpeg";
+import hero103 from "../../assets/hero103.jpeg";
+import hero104 from "../../assets/hero104.jpeg";
+import hero105 from "../../assets/hero105.jpeg";
+import hero106 from "../../assets/hero106.jpeg";
+import hero107 from "../../assets/hero107.jpeg";
+import hero108 from "../../assets/hero108.jpeg";
 import hero5 from "../../assets/hero5.jpeg";
 import hero20 from "../../assets/hero20.jpeg";
 import hero21 from "../../assets/hero21.jpeg";
@@ -13,7 +19,7 @@ import hero23 from "../../assets/hero23.jpeg";
 
 export default function GalleryPreview() {
 
-  const gallery = [hero1, hero2, hero3, hero4, hero5, hero20, hero21, hero22, hero23];
+  const gallery = [hero1, hero5, hero20, hero21, hero22, hero23, hero100, hero101, hero102, hero103, hero104, hero105, hero106, hero107, hero108];
 
   return (
 
