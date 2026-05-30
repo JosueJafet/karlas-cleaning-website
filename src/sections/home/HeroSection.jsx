@@ -9,7 +9,7 @@ import {
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import hero9 from "../../assets/hero9.png";
+import hero9 from "../../assets/hero109.jpeg";
 
 export default function HeroSection() {
   return (
